@@ -1,13 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import "@fontsource/dancing-script";
+import homeImg from "../../public/img/baskit-home-img.jpg";
 
 export default function Home() {
   return (
     <section className=" relative min-h-screen flex flex-col">
       <Image
-        src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt=""
+        src={homeImg}
+        alt="Home Page Image"
         height={1000}
         width={1000}
         className="w-full h-screen object-cover"
