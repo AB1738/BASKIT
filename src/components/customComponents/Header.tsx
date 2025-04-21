@@ -1,4 +1,4 @@
-import { ShoppingCart } from "lucide-react";
+import { ShoppingBasket } from "lucide-react";
 import Link from "next/link";
 
 const Header = () => {
@@ -19,7 +19,7 @@ const Header = () => {
         <div className="text-3xl font-bold uppercase ">Baskit</div>
       </Link>
       <div className="flex flex-1  justify-end">
-        <ShoppingCart />
+        <ShoppingBasket />
       </div>
     </nav>
   );
