@@ -11,18 +11,28 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { toast } from "sonner";
+import { useState } from "react";
 interface PropType {
   product: Product;
 }
 
 const AddToCartForm = ({ product }: PropType) => {
   const { addToCart, cart } = useCartStore();
+  const [size, setSize] = useState<string>("");
+  const [error, setError] = useState<string | null>(null);
   const handleSubmit = (
     product: Product,
     e: React.FormEvent<HTMLFormElement>
   ) => {
     e.preventDefault();
-    addToCart(product);
+    setError(null);
+    if (size.trim().length < 1) {
+      setError((error) => "You must choose a size.");
+      return;
+    }
+    const cartProduct = { ...product, sizes: size };
+    addToCart(cartProduct);
+
     toast.success("Item Added To Cart");
     console.log(cart);
   };
@@ -32,7 +42,7 @@ const AddToCartForm = ({ product }: PropType) => {
       className="flex flex-col items-center gap-3"
     >
       {product.sizes && (
-        <Select required>
+        <Select required value={size} onValueChange={setSize}>
           <SelectTrigger className="w-[180px] cursor-pointer">
             <SelectValue placeholder="Sizes" />
           </SelectTrigger>
@@ -44,6 +54,11 @@ const AddToCartForm = ({ product }: PropType) => {
             ))}
           </SelectContent>
         </Select>
+      )}
+      {error && (
+        <p className="text-red-500 text-xs font-semibold text-center">
+          {error}
+        </p>
       )}
       <p className="font-extrabold py-2">{product.price}</p>
       <Button

@@ -8,6 +8,7 @@ export type CartItem={
     image:string,
     description:string,
     // quantity:number,
+    sizes?:string,
     price:number,
 }
 
