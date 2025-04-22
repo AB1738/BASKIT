@@ -9,9 +9,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Baskit - Your One-Stop Shop for Quality Goods",
+  title: "BASKIT - Premium Apparel for Every Style",
   description:
-    "Discover premium products at Baskit. Shop from a wide range of categories with easy navigation and secure checkout.",
+    "Welcome to BASKIT, your destination for high-quality clothing and stylish essentials. From trendy tees to cozy hoodies, we’ve got something for everyone.",
   keywords: [
     "ecommerce",
     "shopping",
