@@ -45,7 +45,7 @@ const productPage = async ({ params }: PropType) => {
         />
         <div className="flex flex-col justify-center items-center gap-5">
           <h1
-            className="text-4xl sm:text-4xl font-bold text-center sm:text-left py-4"
+            className="text-4xl sm:text-4xl font-bold text-center sm:text-left py-4 animate-pulse"
             style={{ fontFamily: "Dancing Script" }}
           >
             Because You Deserve It
@@ -64,7 +64,12 @@ const productPage = async ({ params }: PropType) => {
             </SelectContent>
           </Select>
           <p className="font-extrabold">{product.price}</p>
-          <Button className="cursor-pointer">Add To Cart</Button>
+          <Button
+            className="cursor-pointer hover:scale-101 transition-all duration-400"
+            size={"lg"}
+          >
+            Add To Cart
+          </Button>
         </div>
       </div>
     </div>
