@@ -3,6 +3,10 @@ const layout = ({
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
-  return <main className="mx-auto min-h-screen max-w-7xl">{children}</main>;
+  return (
+    <div className="bg-stone-100 w-full">
+      <main className="mx-auto min-h-screen max-w-7xl ">{children}</main>
+    </div>
+  );
 };
 export default layout;

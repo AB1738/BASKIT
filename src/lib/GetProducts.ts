@@ -10,7 +10,7 @@ export const getMensProducts=async()=>{
        const mensProducts=products.data.products.category.filter((c)=>c.name==='Mens')
         return mensProducts
     }catch(e){
-        console.log(e)
+        console.error(e)
         
     }
 }
@@ -25,7 +25,7 @@ export const getWomensProducts=async()=>{
        const womensProducts=products.data.products.category.filter((c)=>c.name==='Womens')
         return womensProducts
     }catch(e){
-        console.log(e)
+        console.error(e)
         
     }
 }
@@ -40,12 +40,12 @@ export const getAccessories=async()=>{
        const Accessories=products.data.products.category.filter((c)=>c.name==='Accessories')
         return Accessories
     }catch(e){
-        console.log(e)
+        console.error(e)
         
     }
 }
 
-export const getProducts=async()=>{
+ const getProducts=async()=>{
     try{
 
         const response = await fetch('http://localhost:3000/products.json')
@@ -54,8 +54,20 @@ export const getProducts=async()=>{
         if(!products.success) throw new Error()
         return products
     }catch(e){
-        console.log(e)
+        console.error(e)
         
+    }
+}
+
+export const getProductById=async(id:number)=>{
+    try{
+        const products=await getProducts()
+        const product=products?.data.products.category.map((prduct)=>prduct.items.filter((item)=>item.id===id))
+        const foundProduct = product?.filter(item => item.length > 0);
+        return foundProduct
+
+    }catch(e){
+        console.error(e)
     }
 }
 
