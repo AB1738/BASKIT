@@ -1,22 +1,23 @@
 import { getWomensProducts } from "@/lib/GetProducts";
-import Image from "next/image";
+import "@fontsource/dancing-script";
+import ProductCard from "@/components/customComponents/ProductCard";
 
 const womenProducts = async () => {
   const products = await getWomensProducts();
-  if (products) console.log(products);
   return (
     <div>
-      womenProducts
-      {products &&
-        products[0].items.map((product) => (
-          <Image
-            key={product.id}
-            alt={product.description}
-            height={500}
-            width={500}
-            src={product.image}
-          />
-        ))}
+      <h1
+        className="text-4xl text-center sm:text-left sm:text-5xl font-bold  py-3"
+        style={{ fontFamily: "Dancing Script" }}
+      >
+        Women's Products
+      </h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+        {products &&
+          products[0].items.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+      </div>
     </div>
   );
 };

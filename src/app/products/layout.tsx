@@ -5,7 +5,7 @@ const layout = ({
 }>) => {
   return (
     <div className="bg-stone-100 w-full">
-      <main className="mx-auto min-h-screen max-w-7xl ">{children}</main>
+      <main className="mx-auto min-h-screen max-w-7xl p-4 ">{children}</main>
     </div>
   );
 };

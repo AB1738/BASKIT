@@ -17,22 +17,23 @@ interface ProductsPropType {
 const ProductCard = ({ product }: ProductsPropType) => {
   return (
     <Link href={`/products/${product.id}`}>
-      <Card>
+      <Card className="h-140">
         <CardHeader>
           <CardTitle>{product.name}</CardTitle>
-          <CardDescription>{product.description}</CardDescription>
         </CardHeader>
         <CardContent>
           <Image
             key={product.id}
             alt={product.description}
-            height={500}
-            width={500}
+            height={1000}
+            width={1000}
             src={product.image}
+            className="h-90"
           />
+          <CardDescription>{product.description}</CardDescription>
         </CardContent>
-        <CardFooter>
-          <p>{product.price}</p>
+        <CardFooter className="flex justify-end">
+          <p className="text-xs font-bold">{product.price}</p>
         </CardFooter>
       </Card>
     </Link>
