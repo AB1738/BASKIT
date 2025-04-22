@@ -3,15 +3,8 @@ import Image from "next/image";
 import "@fontsource/dancing-script";
 
 import { notFound } from "next/navigation";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import AddToCartBtn from "@/components/customComponents/AddToCartBtn";
 
+import AddToCartForm from "@/components/customComponents/AddToCartForm";
 interface PropType {
   params: {
     id: string;
@@ -52,20 +45,8 @@ const productPage = async ({ params }: PropType) => {
             Because You Deserve It
           </h1>
           <p className="text-center">{product.description}</p>
-          <Select>
-            <SelectTrigger className="w-[180px] cursor-pointer">
-              <SelectValue placeholder="Sizes" />
-            </SelectTrigger>
-            <SelectContent>
-              {product.sizes?.map((size) => (
-                <SelectItem value={size} key={size} className="cursor-pointer">
-                  {size}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-          <p className="font-extrabold">{product.price}</p>
-          <AddToCartBtn product={product} />
+
+          <AddToCartForm product={product} />
         </div>
       </div>
     </div>
