@@ -17,7 +17,7 @@ interface ProductsPropType {
 const ProductCard = ({ product }: ProductsPropType) => {
   return (
     <Link href={`/products/${product.id}`}>
-      <Card className="h-140">
+      <Card className="h-140 hover:scale-101 transition-all duration-500">
         <CardHeader>
           <CardTitle>{product.name}</CardTitle>
         </CardHeader>
