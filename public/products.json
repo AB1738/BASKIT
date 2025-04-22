@@ -9,7 +9,7 @@
               "name": "Men's Black T-Shirt",
               "type": "T-Shirt",
               "price": 25.99,
-              "image": "/images/store-imgs/men/Mens-T-Shirt-1.jpg",
+              "image": "/img/store-imgs/men/Mens-T-Shirt-1.jpg",
               "description": "A comfortable black t-shirt for men, perfect for casual wear.",
               "sizes": ["S", "M", "L", "XL"]
             },
@@ -18,7 +18,7 @@
               "name": "Men's Blue T-Shirt",
               "type": "T-Shirt",
               "price": 25.99,
-              "image": "/images/store-imgs/men/Mens-T-Shirt-2.jpg",
+              "image": "/img/store-imgs/men/Mens-T-Shirt-2.jpg",
               "description": "A stylish blue t-shirt for men, great for everyday comfort.",
               "sizes": ["S", "M", "L", "XL"]
             },
@@ -27,7 +27,7 @@
               "name": "Men's Brown Hoodie",
               "type": "Hoodie",
               "price": 39.99,
-              "image": "/images/store-imgs/men/Mens-Hoodie-1.jpg",
+              "image": "/img/store-imgs/men/Mens-Hoodie-1.jpg",
               "description": "A cozy brown hoodie for men, perfect for colder days.",
               "sizes": ["S", "M", "L", "XL"]
             },
@@ -36,7 +36,7 @@
               "name": "Men's Green Hoodie",
               "type": "Hoodie",
               "price": 39.99,
-              "image": "/images/store-imgs/men/Mens-Hoodie-2.jpg",
+              "image": "/img/store-imgs/men/Mens-Hoodie-2.jpg",
               "description": "A comfortable green hoodie for men, ideal for casual outings.",
               "sizes": ["S", "M", "L", "XL"]
             },
@@ -45,7 +45,7 @@
               "name": "Men's Light Blue Jeans",
               "type": "Jeans",
               "price": 49.99,
-              "image": "/images/store-imgs/men/Mens-Jeans-1.jpg",
+              "image": "/img/store-imgs/men/Mens-Jeans-1.jpg",
               "description": "A pair of light blue jeans for men, designed for a relaxed fit.",
               "sizes": ["28", "30", "32", "34"]
             },
@@ -54,7 +54,7 @@
               "name": "Men's Dark Blue Jeans",
               "type": "Jeans",
               "price": 42.99,
-              "image": "/images/store-imgs/men/Mens-Jeans-2.jpg",
+              "image": "/img/store-imgs/men/Mens-Jeans-2.jpg",
               "description": "Dark blue jeans for men, offering a classic and versatile look.",
               "sizes": ["28", "30", "32", "34"]
             },
@@ -63,7 +63,7 @@
               "name": "Men's Sweatpants",
               "type": "Sweatpants",
               "price": 29.99,
-              "image": "/images/store-imgs/men/Mens-Sweatpants-1.jpg",
+              "image": "/img/store-imgs/men/Mens-Sweatpants-1.jpg",
               "description": "Comfortable sweatpants for men, perfect for lounging or casual wear.",
               "sizes": ["S", "M", "L", "XL"]
             },
@@ -72,7 +72,7 @@
               "name": "Men's Black Sweatpants",
               "type": "Sweatpants",
               "price": 29.99,
-              "image": "/images/store-imgs/men/Mens-Sweatpants-2.jpg",
+              "image": "/img/store-imgs/men/Mens-Sweatpants-2.jpg",
               "description": "Stylish black sweatpants for men, ideal for workouts or casual days.",
               "sizes": ["S", "M", "L", "XL"]
             }
@@ -86,7 +86,7 @@
               "name": "Women's Dark Green T-Shirt",
               "type": "T-Shirt",
               "price": 25.99,
-              "image": "/images/store-imgs/womens/Womens-T-Shirt-2.jpg",
+              "image": "/img/store-imgs/women/Womens-T-Shirt-2.jpg",
               "description": "A stylish t-shirt for women in a deep, rich hue that shifts between dark green, navy, and charcoal depending on the lighting. A versatile piece perfect for any casual outfit.",
               "sizes": ["S", "M", "L", "XL"]
             },
@@ -95,7 +95,7 @@
               "name": "Women's Pink Striped T-Shirt",
               "type": "T-Shirt",
               "price": 25.99,
-              "image": "/images/store-imgs/womens/Womens-T-Shirt-1.jpg",
+              "image": "/img/store-imgs/women/Womens-T-Shirt-1.jpg",
               "description": "A chic pink striped t-shirt for women, offering both comfort and style.",
               "sizes": ["S", "M", "L", "XL"]
             },
@@ -104,7 +104,7 @@
               "name": "Beige Women's Hoodie",
               "type": "Hoodie",
               "price": 35.99,
-              "image": "/images/store-imgs/womens/Womens-Hoodie-1.jpg",
+              "image": "/img/store-imgs/women/Womens-Hoodie-1.jpg",
               "description": "A beige hoodie for women, perfect for layering and staying cozy.",
               "sizes": ["S", "M", "L", "XL"]
             },
@@ -113,7 +113,7 @@
               "name": "Los Angeles Women's Hoodie",
               "type": "Hoodie",
               "price": 42.99,
-              "image": "/images/store-imgs/womens/Womens-Hoodie-2.jpg",
+              "image": "/img/store-imgs/women/Womens-Hoodie-2.jpg",
               "description": "A stylish Los Angeles-themed hoodie for women, ideal for casual wear.",
               "sizes": ["S", "M", "L", "XL"]
             },
@@ -122,7 +122,7 @@
               "name": "Women's Bootcut Jeans",
               "type": "Jeans",
               "price": 49.99,
-              "image": "/images/store-imgs/womens/Womens-Bootcut-Jeans.jpg",
+              "image": "/img/store-imgs/women/Womens-Bootcut-Jeans.jpg",
               "description": "A pair of bootcut jeans for women, offering a flattering fit for all body types.",
               "sizes": ["0", "2", "4", "6", "8", "10"]
             },
@@ -131,7 +131,7 @@
               "name": "Women's Skinny Jeans",
               "type": "Jeans",
               "price": 49.99,
-              "image": "/images/store-imgs/womens/Womens-Skinny-Jeans.jpg",
+              "image": "/img/store-imgs/women/Womens-Skinny-Jeans.jpg",
               "description": "A sleek pair of skinny jeans for women, designed for a modern and trendy look.",
               "sizes": ["0", "2", "4", "6", "8", "10"]
             },
@@ -140,7 +140,7 @@
               "name": "Leggings",
               "type": "Leggings",
               "price": 19.99,
-              "image": "/images/store-imgs/womens/Leggings.jpg",
+              "image": "/img/store-imgs/women/Leggings.jpg",
               "description": "Stretchy and comfortable leggings for women, perfect for working out or casual days.",
               "sizes": ["S", "M", "L", "XL"]
             },
@@ -149,7 +149,7 @@
               "name": "Women's Sweatpants",
               "type": "Sweatpants",
               "price": 29.99,
-              "image": "/images/store-imgs/womens/Womens-Sweatpants.jpg",
+              "image": "/img/store-imgs/women/Womens-Sweatpants.jpg",
               "description": "Soft and cozy sweatpants for women, ideal for lounging or casual outings.",
               "sizes": ["S", "M", "L", "XL"]
             }
@@ -163,7 +163,7 @@
               "name": "Backpack",
               "type": "Bag",
               "price": 59.99,
-              "image": "/images/store-imgs/accessories/Backpack.jpg",
+              "image": "/img/store-imgs/accessories/Backpack.jpg",
               "description": "A durable and stylish backpack, perfect for daily use or travel."
             },
             {
@@ -171,7 +171,7 @@
               "name": "Handbag",
               "type": "Bag",
               "price": 79.99,
-              "image": "/images/store-imgs/accessories/Handbag.jpg",
+              "image": "/img/store-imgs/accessories/Handbag.jpg",
               "description": "An elegant handbag for women, perfect for any occasion."
             },
             {
@@ -179,7 +179,7 @@
               "name": "Bracelet",
               "type": "Jewelry",
               "price": 14.99,
-              "image": "/images/store-imgs/accessories/Bracelet.jpg",
+              "image": "/img/store-imgs/accessories/Bracelet.jpg",
               "description": "A beautiful bracelet to complement any outfit."
             },
             {
@@ -187,7 +187,7 @@
               "name": "Necklace",
               "type": "Jewelry",
               "price": 25.99,
-              "image": "/images/store-imgs/accessories/Necklace.jpg",
+              "image": "/img/store-imgs/accessories/Necklace.jpg",
               "description": "A stylish necklace, perfect for adding a touch of elegance."
             },
             {
@@ -195,7 +195,7 @@
               "name": "Beanie",
               "type": "Clothing",
               "price": 22.99,
-              "image": "/images/store-imgs/accessories/Beanie.jpg",
+              "image": "/img/store-imgs/accessories/Beanie.jpg",
               "description": "A warm and cozy beanie, perfect for winter days."
             },
             {
@@ -203,7 +203,7 @@
               "name": "Scarf",
               "type": "Clothing",
               "price": 14.99,
-              "image": "/images/store-imgs/accessories/Scarf.jpg",
+              "image": "/img/store-imgs/accessories/Scarf.jpg",
               "description": "A soft and fashionable scarf, perfect for adding warmth and style."
             },
             {
@@ -211,7 +211,7 @@
               "name": "BASKIT Phone Case",
               "type": "Phone Case",
               "price": 18.99,
-              "image": "/images/store-imgs/accessories/BASKIT-phone-case.jpg",
+              "image": "/img/store-imgs/accessories/BASKIT-phone-case.png",
               "description": "A sleek phone case with the Baskit logo, offering protection and style."
             },
             {
@@ -219,7 +219,7 @@
               "name": "Sunglasses",
               "type": "Glasses",
               "price": 22.99,
-              "image": "/images/store-imgs/accessories/Sunglasses.jpg",
+              "image": "/img/store-imgs/accessories/Sunglasses.jpg",
               "description": "A stylish pair of sunglasses, perfect for sunny days."
             }
           ]
