@@ -8,7 +8,8 @@ const Footer = () => {
   return (
     <footer
       className={`flex justify-center py-7 px-4 text-xs text-center ${
-        pathname.split("/").includes("products")
+        pathname.split("/").includes("products") ||
+        pathname.split("/").includes("cart")
           ? "bg-stone-100"
           : "bg-[#b9c2c7]"
       }`}

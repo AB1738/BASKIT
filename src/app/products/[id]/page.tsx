@@ -10,7 +10,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Button } from "@/components/ui/button";
+import AddToCartBtn from "@/components/customComponents/AddToCartBtn";
 
 interface PropType {
   params: {
@@ -25,6 +25,7 @@ const productPage = async ({ params }: PropType) => {
   if (!product) {
     return notFound();
   }
+
   return (
     <div className="flex flex-col">
       <h1
@@ -64,12 +65,7 @@ const productPage = async ({ params }: PropType) => {
             </SelectContent>
           </Select>
           <p className="font-extrabold">{product.price}</p>
-          <Button
-            className="cursor-pointer hover:scale-101 transition-all duration-400"
-            size={"lg"}
-          >
-            Add To Cart
-          </Button>
+          <AddToCartBtn product={product} />
         </div>
       </div>
     </div>

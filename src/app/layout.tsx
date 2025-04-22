@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/customComponents/Header";
 import Footer from "@/components/customComponents/Footer";
+import { Toaster } from "@/components/ui/sonner";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600"],
@@ -33,6 +34,8 @@ export default function RootLayout({
       <body className={`${poppins.className}  antialiased min-h-screen `}>
         <Header />
         <main className="mx-auto min-h-screen">{children}</main>
+        <Toaster />
+
         <Footer />
       </body>
     </html>
