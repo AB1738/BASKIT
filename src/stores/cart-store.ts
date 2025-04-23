@@ -7,7 +7,6 @@ export type CartItem={
     name:string,
     image:string,
     description:string,
-    // quantity:number,
     sizes?:string,
     price:number,
     qty:number
@@ -19,7 +18,6 @@ export type CartStore = {
   incrementQty:(id:number)=>void,
   decrementQty:(id:number)=>void,
   removeFromCart:(id:number)=>void,
-//   getTotalPrice:()=>number,
   clearCart:()=>void
 }
 export const useCartStore = create<CartStore>((set) => ({
@@ -57,6 +55,8 @@ incrementQty:(id)=>set((state)=>{
          })}
  
          }
+         return { cart: state.cart };
+
 }),
 decrementQty:(id)=>set((state)=>{
     const foundProduct=state.cart.find((prod)=>prod.id===id)
@@ -67,43 +67,15 @@ decrementQty:(id)=>set((state)=>{
                  return {...prduct,qty:prduct.qty-1}
              }else
              return prduct
-         })}
+         }).filter((prod)=>prod.qty!==0)}
  
          }
+         return { cart: state.cart };
+
 }),
     removeFromCart:(id)=>set((state)=>({cart:state.cart.filter((prod)=>prod.id!==id)})),
-    // getTotalPrice:()=>set((state)=>({cart:state.cart.reduce((acc,prod)=>{
-    //     acc+=prod.totalPrice
-    // },0)})),
+
     clearCart:()=>set({cart:[]})
   }));
   
 
-//     incrementCount: () => set((state) => ({ count: state.count + 1 })),
-
-// addToCart:(item)=>set((state)=>({cart:[...state.cart,item]})),
-// removeFromCart:(id)=>set((state)=>({cart:state.cart.filter((prod)=>prod.id!==id)})),
-[
-    {
-        id:1,
-        name:'product name',
-        image:'product image',
-        description:'product description',
-        quantity:'2',
-        price:10,
-        totalPrice:20
-    },
-    {
-        id:2,
-        name:'product name',
-        image:'product image',
-        description:'product description',
-        quantity:'2',
-        price:10,
-        totalPrice:20
-    }
-]
-
-//addToCart() [if item already exists in cart, then increment the quantity]
-//removeFromCart()[if quantity reaches zero in cart, remove from cart] 
-//clearCart()[set cart to empty array]
