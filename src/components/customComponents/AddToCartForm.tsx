@@ -26,11 +26,11 @@ const AddToCartForm = ({ product }: PropType) => {
   ) => {
     e.preventDefault();
     setError(null);
-    if (size.trim().length < 1) {
+    if (size.trim().length < 1 && product.sizes) {
       setError((error) => "You must choose a size.");
       return;
     }
-    const cartProduct = { ...product, sizes: size };
+    const cartProduct = { ...product, sizes: size, qty: 1 };
     addToCart(cartProduct);
 
     toast.success("Item Added To Cart");

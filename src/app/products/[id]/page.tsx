@@ -35,7 +35,7 @@ const productPage = async ({ params }: PropType) => {
           height={1000}
           width={1000}
           src={product.image}
-          className="h-150 pb-3"
+          className="h-150 pb-3 object-contain sm:object-fill"
         />
         <div className="flex flex-col justify-center items-center gap-5">
           <h1

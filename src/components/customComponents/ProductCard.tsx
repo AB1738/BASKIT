@@ -28,7 +28,7 @@ const ProductCard = ({ product }: ProductsPropType) => {
             height={1000}
             width={1000}
             src={product.image}
-            className="h-90 pb-3"
+            className="h-90 pb-3 object-contain sm:object-fill"
           />
           <CardDescription>{product.description}</CardDescription>
         </CardContent>

@@ -11,7 +11,9 @@ const layout = ({
 }>) => {
   return (
     <div className="bg-stone-100 w-full">
-      <main className="mx-auto min-h-screen max-w-7xl p-4 ">{children}</main>
+      <div className="mx-auto min-h-screen max-w-7xl py-4 px-6 lg:px-0 flex flex-col">
+        {children}
+      </div>
     </div>
   );
 };
