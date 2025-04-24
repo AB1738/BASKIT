@@ -1,4 +1,4 @@
-import { getProductById } from "@/lib/GetProducts";
+import getProducts, { getProductById } from "@/lib/GetProducts";
 import Image from "next/image";
 import "@fontsource/dancing-script";
 
@@ -6,9 +6,28 @@ import { notFound } from "next/navigation";
 
 import AddToCartForm from "@/components/customComponents/AddToCartForm";
 
+export async function generateStaticParams() {
+  const products = await getProducts();
+
+  if (!products) return [];
+  return products.data.products.category
+    .map((item) => ({
+      id: item.items.map((i) => i.id),
+    }))
+    .reduce<{ id: string }[]>((acc, item) => {
+      const ids = item.id.map((id) => {
+        return {
+          id: id.toString(),
+        };
+      });
+      return acc.concat(ids);
+    }, []);
+}
+
 const productPage = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params;
   const foundProduct = await getProductById(parseInt(id));
+
   const product = foundProduct?.[0][0];
   if (!product) {
     return notFound();
