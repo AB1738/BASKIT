@@ -25,13 +25,17 @@ const CartPage = () => {
 
   const handleCheckout = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/checkout", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(cart),
-      });
+      console.log(process.env.BASE_URL!);
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/checkout`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(cart),
+        }
+      );
       const { redirectUrl } = await response.json();
       window.location.assign(redirectUrl);
     } catch (e) {
