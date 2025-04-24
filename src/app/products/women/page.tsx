@@ -10,7 +10,7 @@ const womenProducts = async () => {
         className="text-4xl text-center sm:text-left sm:text-5xl font-bold  py-3"
         style={{ fontFamily: "Dancing Script" }}
       >
-        Women's Products
+        {"Women's Products"}
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
         {products &&

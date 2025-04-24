@@ -5,16 +5,11 @@ import "@fontsource/dancing-script";
 import { notFound } from "next/navigation";
 
 import AddToCartForm from "@/components/customComponents/AddToCartForm";
-interface PropType {
-  params: {
-    id: string;
-  };
-}
-const productPage = async ({ params }: PropType) => {
+
+const productPage = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params;
   const foundProduct = await getProductById(parseInt(id));
   const product = foundProduct?.[0][0];
-  console.log(product);
   if (!product) {
     return notFound();
   }

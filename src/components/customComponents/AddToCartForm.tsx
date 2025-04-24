@@ -17,7 +17,7 @@ interface PropType {
 }
 
 const AddToCartForm = ({ product }: PropType) => {
-  const { addToCart, cart } = useCartStore();
+  const { addToCart } = useCartStore();
   const [size, setSize] = useState<string>("");
   const [error, setError] = useState<string | null>(null);
   const handleSubmit = (
@@ -27,14 +27,13 @@ const AddToCartForm = ({ product }: PropType) => {
     e.preventDefault();
     setError(null);
     if (size.trim().length < 1 && product.sizes) {
-      setError((error) => "You must choose a size.");
+      setError("You must choose a size.");
       return;
     }
     const cartProduct = { ...product, sizes: size, qty: 1 };
     addToCart(cartProduct);
 
     toast.success("Item Added To Cart");
-    console.log(cart);
   };
   return (
     <form

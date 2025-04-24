@@ -1,14 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { headers } from "next/headers";
-import Stripe from "stripe";
+import { stripe } from "@/lib/stripe";
 import { CartItem } from "@/stores/cart-store";
 
-export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
-
-export const POST = async (req: NextRequest, res: NextResponse) => {
+export const POST = async (req: NextRequest) => {
   try {
     const data = await req.json();
-    // console.log(data);
     const headersList = await headers();
     const origin = headersList.get("origin");
 
@@ -20,9 +17,8 @@ export const POST = async (req: NextRequest, res: NextResponse) => {
           currency: "usd",
           product_data: {
             name: item.name,
-            // images: [item.image],
           },
-          unit_amount: Math.round(item.price * 100), // TODO: Price should be retrieved from db
+          unit_amount: Math.round(item.price * 100),
         },
         quantity: item.qty,
       };
@@ -35,7 +31,6 @@ export const POST = async (req: NextRequest, res: NextResponse) => {
       success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/?canceled=true`,
     });
-    // console.log(session);
     return NextResponse.json({ redirectUrl: session.url });
   } catch (e: unknown) {
     if (e instanceof Error) return NextResponse.json({ error: e.message });

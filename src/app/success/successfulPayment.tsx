@@ -11,7 +11,7 @@ const SuccessfulPayment = () => {
   const { clearCart } = useCartStore();
   useEffect(() => {
     clearCart();
-  }, []);
+  }, [clearCart]);
   return (
     <section id="success" className="grid grid-cols-1 sm:grid-cols-2 relative ">
       <Image
@@ -30,8 +30,8 @@ const SuccessfulPayment = () => {
         </h1>
         <CircleCheckBig size={150} className="text-white sm:text-green-500 " />
         <p className="text-center text-white sm:text-black font-semibold text-sm sm:text-md leading-7.5">
-          BASKIT has your order! We’ve sent the confirmation to your inbox.
-          You’ll hear from us again when it’s on the way.
+          {"BASKIT has your order! We’ve sent the confirmation to your inbox."}
+          {"You’ll hear from us again when it’s on the way."}
         </p>
       </div>
     </section>

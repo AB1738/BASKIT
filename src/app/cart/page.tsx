@@ -14,7 +14,7 @@ import "@fontsource/dancing-script";
 import Image from "next/image";
 import { toast } from "sonner";
 
-const cartPage = () => {
+const CartPage = () => {
   const { cart, clearCart, removeFromCart, incrementQty, decrementQty } =
     useCartStore();
 
@@ -24,7 +24,6 @@ const cartPage = () => {
   }, 0);
 
   const handleCheckout = async () => {
-    console.log("click");
     try {
       const response = await fetch("http://localhost:3000/api/checkout", {
         method: "POST",
@@ -142,4 +141,4 @@ const cartPage = () => {
     </div>
   );
 };
-export default cartPage;
+export default CartPage;

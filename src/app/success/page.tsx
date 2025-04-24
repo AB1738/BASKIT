@@ -1,14 +1,12 @@
 import { notFound, redirect } from "next/navigation";
-import { stripe } from "../api/checkout/route";
 import SuccessfulPayment from "./successfulPayment";
+import { stripe } from "@/lib/stripe";
 
-interface SuccessPagePropType {
-  searchParams: {
-    session_id: string;
-  };
-}
-
-export default async function Success({ searchParams }: SuccessPagePropType) {
+export default async function Success({
+  searchParams,
+}: {
+  searchParams: Promise<{ session_id: string }>;
+}) {
   const { session_id } = await searchParams;
 
   if (!session_id) notFound();
