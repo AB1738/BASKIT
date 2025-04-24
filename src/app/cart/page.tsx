@@ -17,15 +17,34 @@ import { toast } from "sonner";
 const cartPage = () => {
   const { cart, clearCart, removeFromCart, incrementQty, decrementQty } =
     useCartStore();
-  console.log(cart);
+
   const totalPrice = cart.reduce((acc, item) => {
     acc += item.qty * item.price;
     return acc;
   }, 0);
+
+  const handleCheckout = async () => {
+    console.log("click");
+    try {
+      const response = await fetch("http://localhost:3000/api/checkout", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(cart),
+      });
+      const { redirectUrl } = await response.json();
+      window.location.assign(redirectUrl);
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
   const handleDelete = (id: number, name: string) => {
     removeFromCart(id);
     toast.success(`${name} removed from cart`);
   };
+
   return (
     <div className="flex-1 flex flex-col">
       <h1
@@ -112,7 +131,10 @@ const cartPage = () => {
             </h3>
           </div>
 
-          <Button className="w-full p-3 mt-3 cursor-pointer mx-auto ">
+          <Button
+            className="w-full p-3 mt-3 cursor-pointer mx-auto "
+            onClick={handleCheckout}
+          >
             Checkout <CircleCheck />
           </Button>
         </>
