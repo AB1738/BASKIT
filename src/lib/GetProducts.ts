@@ -2,9 +2,7 @@ import productSchema from "../../schema";
 
 export const getMensProducts = async () => {
   try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/products.json`
-    );
+    const response = await fetch(`${process.env.BASE_URL}/products.json`);
     const data = await response.json();
     const products = productSchema.safeParse(data);
     if (!products.success) throw new Error();
@@ -19,9 +17,7 @@ export const getMensProducts = async () => {
 
 export const getWomensProducts = async () => {
   try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/products.json`
-    );
+    const response = await fetch(`${process.env.BASE_URL}/products.json`);
     const data = await response.json();
     const products = productSchema.safeParse(data);
     if (!products.success) throw new Error();
@@ -36,9 +32,7 @@ export const getWomensProducts = async () => {
 
 export const getAccessories = async () => {
   try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/products.json`
-    );
+    const response = await fetch(`${process.env.BASE_URL}/products.json`);
     const data = await response.json();
     const products = productSchema.safeParse(data);
     if (!products.success) throw new Error();
@@ -53,9 +47,7 @@ export const getAccessories = async () => {
 
 const getProducts = async () => {
   try {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/products.json`
-    );
+    const response = await fetch(`${process.env.BASE_URL}/products.json`);
     const data = await response.json();
     const products = productSchema.safeParse(data);
     if (!products.success) throw new Error();
